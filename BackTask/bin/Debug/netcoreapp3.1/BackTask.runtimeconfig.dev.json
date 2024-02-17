@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\osama.alaa.Meters\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\osama.alaa.Meters\\.nuget\\packages"
+    ]
+  }
+}
