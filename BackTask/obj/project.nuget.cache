@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GWn4mtdeEiu9Td6z9HcWL89kUYt3LpGKgJMK4/BHQcuZ8a4g10W2QmTMKKRmWJdcw6dGp599hMS1PJek5aYnNA==",
+  "dgSpecHash": "rbewUc8TEUEWKg4cNPjteYPWI8n3Xv8SAv7ftkaf/2Drp7kwh3Hd5/NOb4e5+iNeMdjC0O0c97X7ym/1gB38lw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\osama.alaa.Meters\\source\\repos\\BackTask\\BackTask\\BackTask.csproj",
+  "projectFilePath": "C:\\Users\\osama.alaa.Meters\\source\\repos\\BackTask\\System-Management-Customer---back\\BackTask\\BackTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\osama.alaa.Meters\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\osama.alaa.Meters\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.1.1\\automapper.extensions.microsoft.dependencyinjection.6.1.1.nupkg.sha512",

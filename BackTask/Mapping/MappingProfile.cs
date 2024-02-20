@@ -15,6 +15,7 @@ namespace BackTask.Mapping
             CreateMap<Country, CreateCountryDto>().ReverseMap();
             CreateMap<City, CreateCityDto>().ReverseMap();
             CreateMap<Customer, CreateCustomerDto>().ReverseMap();
+            CreateMap<Customer, UpdateCustomerDto>().ReverseMap();
 
         }
     }

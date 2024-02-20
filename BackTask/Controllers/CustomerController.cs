@@ -15,7 +15,7 @@ namespace BackTask.Controllers
     {
         private readonly ICustomerRepository _customerRepository;
         private readonly IMapper _mapper;
-
+        private object existingCustomer;
 
         public CustomerController(ICustomerRepository customerRepository, IMapper mapper)
         {
@@ -75,6 +75,58 @@ namespace BackTask.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
+        [HttpPut]
+        public async Task<ActionResult<CustomerDto>> UpdateCustomer(UpdateCustomerDto customerDto)
+        {
+            try
+            {
+                var existingCustomer = await _customerRepository.GetCustomerById(customerDto.Id);
+
+                if (existingCustomer == null)
+                {
+                    return NotFound($"Customer with ID {existingCustomer.Id} not found");
+                }
+
+                _mapper.Map(customerDto, existingCustomer);
+
+                await _customerRepository.UpdateCustomer(existingCustomer);
+
+                var updatedCustomerDto = _mapper.Map<CustomerDto>(existingCustomer);
+
+                return Ok(updatedCustomerDto);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteCustomer(int id)
+        {
+            try
+            {
+                var existingCustomer = await _customerRepository.GetCustomerById(id);
+
+                if (existingCustomer == null)
+                {
+                    return NotFound($"Customer with ID {id} not found");
+                }
+
+                await _customerRepository.DeleteCustomer(id);
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+
+
     }
 }
 

@@ -5181,11 +5181,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\osama.alaa.Meters\\source\\repos\\BackTask\\BackTask\\BackTask.csproj",
+      "projectUniqueName": "C:\\Users\\osama.alaa.Meters\\source\\repos\\BackTask\\System-Management-Customer---back\\BackTask\\BackTask.csproj",
       "projectName": "BackTask",
-      "projectPath": "C:\\Users\\osama.alaa.Meters\\source\\repos\\BackTask\\BackTask\\BackTask.csproj",
+      "projectPath": "C:\\Users\\osama.alaa.Meters\\source\\repos\\BackTask\\System-Management-Customer---back\\BackTask\\BackTask.csproj",
       "packagesPath": "C:\\Users\\osama.alaa.Meters\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\osama.alaa.Meters\\source\\repos\\BackTask\\BackTask\\obj\\",
+      "outputPath": "C:\\Users\\osama.alaa.Meters\\source\\repos\\BackTask\\System-Management-Customer---back\\BackTask\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\osama.alaa.Meters\\AppData\\Roaming\\NuGet\\NuGet.Config",
