@@ -2,6 +2,7 @@
 using BackTask.Database.Entities;
 using BackTask.Interface;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -39,6 +40,10 @@ namespace BackTask.Implementation
 
         public async Task AddCity(City city)
         {
+            if (_context.Cities.Any(c => c.Name == city.Name))
+            {
+                throw new Exception("City with the same name already exists.");
+            }
             _context.Cities.Add(city);
             await _context.SaveChangesAsync();
         }

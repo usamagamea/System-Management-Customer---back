@@ -86,6 +86,10 @@ namespace BackTask.Controllers
                 var createdCityDto = _mapper.Map<CityDto>(city);
                 return Ok(createdCityDto);
             }
+            catch (InvalidOperationException)
+            {
+                return Conflict($"A City with the same name '{cityDto.Name}' already exists.");
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");

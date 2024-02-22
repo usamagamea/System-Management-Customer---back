@@ -71,6 +71,10 @@ namespace BackTask.Controllers
                 var createdCountryDto = _mapper.Map<CountryDto>(country);
                 return Ok(createdCountryDto);
             }
+            catch (InvalidOperationException )
+            {
+                return Conflict($"A country with the same name '{countryDto.Name}' already exists.");
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
